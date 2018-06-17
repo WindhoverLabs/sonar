@@ -583,7 +583,7 @@ void  SONAR::GetDistance(void)
 /* Cleanup prior to exit                                           */
 /*                                                                 */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-void CleanupCallback(void)
+void SONAR_CleanupCallback(void)
 {
     SONAR_Critical_Cleanup();
     return;

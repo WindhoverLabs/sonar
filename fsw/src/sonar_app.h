@@ -376,7 +376,7 @@ public:
 };
 
 
-    void SONAR_CleanupCallback(void);
+void SONAR_CleanupCallback(void);
 
 #ifdef __cplusplus
 }
