@@ -570,8 +570,9 @@ void  SONAR::GetDistance(void)
     else
     {
         DistanceSensor.CurrentDistance = -1.0f;
-        (void) CFE_EVS_SendEvent(SONAR_MEASURE_ERR_EID, CFE_EVS_ERROR,
-                                 "Sonar get distance failed.");
+        /* Measure distance will always fail if below minimum distance. */
+        //(void) CFE_EVS_SendEvent(SONAR_MEASURE_ERR_EID, CFE_EVS_ERROR,
+        //                         "Sonar get distance failed.");
     }
 
     return;
