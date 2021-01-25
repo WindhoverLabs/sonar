@@ -14,12 +14,18 @@ add_airliner_app_def(sonar
     INCLUDES
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/
 
-    USER_DOCS   ${CMAKE_CURRENT_SOURCE_DIR}/user_doxy.in
     DESIGN_DOCS ${CMAKE_CURRENT_SOURCE_DIR}/detail_doxy.in
+    
+    REFERENCE_CONFIG
+        ${PROJECT_SOURCE_DIR}/apps/sonar/fsw/mission_inc
+        ${PROJECT_SOURCE_DIR}/apps/sonar/fsw/platform_inc
 )
 
 #add_airliner_app_unit_test(sonar-ut
     #UTASSERT
+    #NO_HELGRIND
+    #NO_MASSIF
+        
     #SOURCES
         #${CMAKE_CURRENT_SOURCE_DIR}/../unit_test/sonar_app_test.cpp
         #${CMAKE_CURRENT_SOURCE_DIR}/../unit_test/sonar_app_test.h
@@ -41,7 +47,7 @@ add_airliner_app_def(sonar
         #${CMAKE_CURRENT_SOURCE_DIR}/../src/sonar_msg.h
         #${CMAKE_CURRENT_SOURCE_DIR}/../src/sonar_tbldefs.h
         #${CMAKE_CURRENT_SOURCE_DIR}/../src/sonar_version.h
-        
+
     #INCLUDES
         #${CMAKE_CURRENT_SOURCE_DIR}/../src/
         #${CMAKE_CURRENT_SOURCE_DIR}/../unit_test/
