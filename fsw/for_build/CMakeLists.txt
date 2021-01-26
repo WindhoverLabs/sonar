@@ -1,5 +1,5 @@
 
-add_airliner_app_def(sonar
+buildliner_add_app_def(sonar
     FILE SONAR
     SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/sonar_app.cpp
@@ -21,7 +21,7 @@ add_airliner_app_def(sonar
         ${PROJECT_SOURCE_DIR}/apps/sonar/fsw/platform_inc
 )
 
-#add_airliner_app_unit_test(sonar-ut
+#buildliner_add_app_unit_test(sonar-ut
     #UTASSERT
     #NO_HELGRIND
     #NO_MASSIF
